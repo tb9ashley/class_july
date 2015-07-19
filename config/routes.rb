@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :notes
+  devise_for :users
   get '/about' => 'main#about', as: 'about'
 
   get '/contact' => 'main#contact', as: 'contact'

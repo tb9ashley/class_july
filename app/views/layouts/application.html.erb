@@ -14,6 +14,10 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+   
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+   
     <div class="nav">
         <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Navigation
@@ -22,6 +26,8 @@
           <ul class="dropdown-menu" aria-labelledby="dLabel">
             <li><%=link_to('About', about_path) %></li>
             <li><%=link_to('Contact', contact_path) %></li>
+            <li><%=link_to('Index', root_path) %></li>
+            <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
           </ul>
     </div>
 
