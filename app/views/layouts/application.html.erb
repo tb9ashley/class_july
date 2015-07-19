@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Workspace</title>
+    
+    
+    <link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="nav">
+        <button id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Navigation
+        <span class="caret"></span>
+        </button>
+          <ul class="dropdown-menu" aria-labelledby="dLabel">
+            <li><%=link_to('About', about_path) %></li>
+            <li><%=link_to('Contact', contact_path) %></li>
+          </ul>
+    </div>
+
+
+    <%= yield %>
+
+
+      <div class="contact">
+      </div>
+      <footer>
+        Footer links
+      </footer>
+</body>
+</html>
